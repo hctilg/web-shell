@@ -4,8 +4,8 @@ if (php_sapi_name() == 'cli') return false;
 
 if (!empty($_GET['font'])) {
   $fonts = [
-    "droid-sans-mono.ttf"=> @file_get_contents("https://github.com/hctilg/web-shell/blob/main/files/droid-sans-mono.ttf?raw=true"),
-    "poppins.ttf"=> @file_get_contents("https://github.com/hctilg/web-shell/blob/main/files/poppins.ttf?raw=true")
+    "droid-sans-mono.ttf"=> @file_get_contents("https://raw.githubusercontent.com/hctilg/web-shell/main/files/droid-sans-mono.ttf"),
+    "poppins.ttf"=> @file_get_contents("https://raw.githubusercontent.com/hctilg/web-shell/main/files/poppins.ttf")
   ];
 
   if (in_array(trim($_GET['font']), array_keys($fonts))) {
@@ -1081,11 +1081,11 @@ body:not([route='info']) #topbar #title .info {
 ";
 
 // jQuery v3.7.0
-$jquery = @file_get_contents("https://github.com/hctilg/web-shell/blob/main/files/jquery.min.js?raw=true");
+$jquery = @file_get_contents("https://raw.githubusercontent.com/hctilg/web-shell/main/files/jquery.min.js");
 
 // jQuery Terminal v2.36.0
-$terminal_js = @file_get_contents("https://github.com/hctilg/web-shell/blob/main/files/terminal.min.js?raw=true");
-$terminal_css = @file_get_contents("https://github.com/hctilg/web-shell/blob/main/files/terminal.min.css?raw=true");
+$terminal_js = @file_get_contents("https://raw.githubusercontent.com/hctilg/web-shell/main/files/terminal.min.js");
+$terminal_css = @file_get_contents("https://raw.githubusercontent.com/hctilg/web-shell/main/files/terminal.min.css");
 
 $minified_html = minify_html($html);
 $minified_css = minify_css($css);
